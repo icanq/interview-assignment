@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   useRecoilValue,
 } from 'recoil';
@@ -8,6 +8,10 @@ import { todoListState } from '../atoms';
 
 export default function TodoList() {
   const todoList = useRecoilValue(todoListState);
+  
+  useEffect(() => {
+    localStorage.setItem('todoList', JSON.stringify(todoList));
+  }, [todoList]);
 
   return (
     <div>

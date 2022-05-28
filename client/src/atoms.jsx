@@ -4,9 +4,10 @@ import {
 
 import { getId } from './helpers';
 
+const saved = JSON.parse(localStorage.getItem('todoList'));
 export const todoListState = atom({
   key: 'TodoList',
-  default: [
+  default: saved || [
     {
       id: getId(),
       text: "Cuci Baju",
