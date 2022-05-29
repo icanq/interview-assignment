@@ -31,11 +31,11 @@ export default function TodoItemCreator() {
       addItem();
     }
   })
-  
+
   return (
     <div>
-      <input type="text" value={inputValue} onChange={onChange} onKeyPress={onKeyPress}/>
-      <button onClick={addItem}>Add</button>
+      <input data-testid="todo-creator-text" type="text" value={inputValue} onChange={onChange} onKeyPress={onKeyPress}/>
+      <button data-testid="add" onClick={addItem}>Tambah</button>
     </div>
   );
 }
