@@ -47,6 +47,6 @@ test("Renders Todo Item Correctly", async () => {
   expect(todoList[0].text).toBe("Tugas Kuliah");
 
   const todoListLength = todoList.length;
-  fireEvent.click(screen.getAllByTestId("delete")[0]);
+  fireEvent.click(screen.getAllByTestId("delete-button")[0]);
   expect(todoList.length).toBe(todoListLength - 1);
 });

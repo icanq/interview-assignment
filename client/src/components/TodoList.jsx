@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import {
   useRecoilValue,
 } from 'recoil';
+import List from '@mui/material/List';
 
 import TodoItem from './TodoItem';
 import { todoListState } from '../atoms';
@@ -14,10 +15,10 @@ export default function TodoList() {
   }, [todoList]);
 
   return (
-    <div>
+    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       {todoList.map((todoItem) => (
           <TodoItem key={todoItem.id} item={todoItem} />
       ))}
-    </div>
+    </List>
   );
 }

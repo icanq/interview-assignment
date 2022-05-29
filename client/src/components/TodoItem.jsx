@@ -2,6 +2,14 @@ import React from "react";
 import {
   useRecoilState,
 } from 'recoil';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import TextField from '@mui/material/TextField';
+import Checkbox from '@mui/material/Checkbox';
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 import { todoListState } from '../atoms';
 
@@ -35,15 +43,42 @@ export default function TodoItem({ item }) {
   };
 
   return (
-    <div>
-      <input type="text" value={item.text} onChange={editItemText} />
-      <input
-        type="checkbox"
-        checked={item.isComplete}
-        onChange={toggleItemCompletion}
-      />
-      <button data-testid="delete" onClick={deleteItem}>X</button>
-    </div>
+    <ListItem
+        key={item.index}
+        secondaryAction={
+          <IconButton
+            data-testid="delete-button"
+            edge="end"
+            onClick={deleteItem}
+          >
+            <DeleteIcon />
+          </IconButton>
+        }
+        disablePadding
+      >
+        <ListItemButton role={undefined} disableRipple dense>
+          <ListItemIcon>
+            <Checkbox
+              edge="start"
+              checked={item.isComplete}
+              disableRipple
+              onClick={toggleItemCompletion}
+            />
+          </ListItemIcon>
+          <ListItemText>
+            <TextField
+             variant="standard"
+              id="todo-creator-text"
+              value={item.text}
+              onChange={editItemText}
+              size="small"
+              inputProps={{
+                "data-testid": "todo-creator-text"
+              }}
+            />
+          </ListItemText>    
+        </ListItemButton>
+      </ListItem>
   );
 }
 
