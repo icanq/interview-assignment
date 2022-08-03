@@ -11,7 +11,7 @@ export default function TodoList({ tasks, setTasks }) {
 
   return (
     <div>
-      {tasks?.length > 0 &&
+      {tasks?.length > 0 ?
         tasks.map((task, index) => {
           return (
             <div key={index} className="todo">
@@ -19,7 +19,9 @@ export default function TodoList({ tasks, setTasks }) {
               <button onClick={removeTask}>Hapus</button>
             </div>
           );
-        })}
+        }) : (
+          <p>Belum ada pekerjaan rumah yang perlu dilakukan 👍</p>
+        )}
     </div>
   );
 }

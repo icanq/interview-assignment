@@ -26,7 +26,9 @@ function App() {
           onChange={(e) => setTask(e.target.value)}
           className="input_textfield"
         />
-        <button onClick={() => handleSubmit()}>Tambah</button>
+        <button onClick={() => handleSubmit()} disabled={!task.length > 0}>
+          Tambah
+        </button>
       </div>
 
       <TodoList tasks={tasks} setTasks={setTasks} />
