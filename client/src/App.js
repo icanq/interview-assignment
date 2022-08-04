@@ -6,8 +6,8 @@ function App() {
   // const tasks = useState(["Cuci Baju", "Masak Nasi"]);
   // const [tasks, setTasks] = useState(["Cuci Baju", "Masak Nasi"]);
   const [tasks, setTasks] = useState([
-    { name: "Cuci Baju", priority: "" },
-    { name: "Masak Nasi", priority: "" },
+    { name: "masak ikan", priority: "" },
+    { name: "minum air", priority: "" },
   ]);
 
   const [task, setTask] = useState("");
@@ -33,6 +33,7 @@ function App() {
           defaultValue=""
           onChange={(e) => setTask(e.target.value)}
           className="input_textfield"
+          placeholder="Masukan nama tugas yang perlu dilakukan ..."
         />
         <div className="priority">
           <p>Prioritas: </p>
