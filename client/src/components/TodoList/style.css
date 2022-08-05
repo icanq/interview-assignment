@@ -9,3 +9,7 @@
     margin-top: 10px;
     border: 1px solid rgb(226 232 240);
 }
+
+.no_task_paragraph {
+    font-weight: 700;
+}

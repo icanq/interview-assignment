@@ -33,7 +33,7 @@ export default function TodoList({ tasks, setTasks }) {
           );
         })
       ) : (
-        <p>Belum ada pekerjaan rumah yang perlu dilakukan 👍</p>
+        <p className="no_task_paragraph">Belum ada pekerjaan rumah yang perlu dilakukan 👍</p>
       )}
     </div>
   );

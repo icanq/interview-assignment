@@ -27,7 +27,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" style={{ maxWidth: "640px", margin: "0 auto" }}>
       <h1>Pekerjaan Rumah Yang Perlu Dilakukan</h1>
       <div className="input-task">
         <Input task={task} setTask={setTask} />
