@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import TodoList from "./TodoList";
+import TodoList from "../TodoList";
 
 // Tes 0: Render "Belum ada pekerjaan rumah yang perlu dilakukan 👍" kalau engga ada todo list
 it("Render Belum ada pekerjaan rumah yang perlu dilakukan 👍 kalau engga ada todo list", async () => {
