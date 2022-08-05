@@ -46,20 +46,6 @@
   gap: 5px;
 }
 
-.input-task button { 
-  height: 30px;
-  background-color:#4506CB;
-  color: white;
-  text-transform: uppercase;
-  font-weight: 700;
-  border-radius: 5px;
-  border: none;
-}
-
-.input-task button:disabled { 
-  background-color: rgb(167 139 250);
-}
-
 .priority {
   display: flex;
 }

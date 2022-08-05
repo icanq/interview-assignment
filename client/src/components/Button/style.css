@@ -1,0 +1,13 @@
+.button_tambah { 
+    height: 30px;
+    background-color:#4506CB;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .button_tambah:disabled { 
+    background-color: rgb(167 139 250);
+  }

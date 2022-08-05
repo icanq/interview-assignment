@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import Button from "./components/Button/Button";
 import Input from "./components/Input/Input";
 import TodoList from "./components/TodoList/TodoList";
 
@@ -59,9 +60,9 @@ function App() {
             Low
           </div>
         </div>
-        <button onClick={() => handleSubmit()} disabled={!task.length > 0}>
+        <Button onClick={handleSubmit} disabled={!task.length > 0}>
           Tambah
-        </button>
+        </Button>
       </div>
 
       <TodoList tasks={tasks} setTasks={setTasks} />
