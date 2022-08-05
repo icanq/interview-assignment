@@ -36,25 +36,25 @@ function App() {
           <div className="priority_radio">
             <input
               type="radio"
-              value="Male"
+              value="high"
               name="priority"
-              onClick={() => setPriority("high")}
+              onChange={(e) => setPriority(e.target.value)}
               checked={priority === "high"}
             />{" "}
             High
             <input
               type="radio"
-              value="Female"
+              value="medium"
               name="priority"
-              onClick={() => setPriority("medium")}
+              onChange={(e) => setPriority(e.target.value)}
               checked={priority === "medium"}
             />{" "}
             Medium
             <input
               type="radio"
-              value="Other"
+              value="low"
               name="priority"
-              onClick={() => setPriority("low")}
+              onChange={(e) => setPriority(e.target.value)}
               checked={priority === "low"}
             />{" "}
             Low
