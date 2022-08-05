@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Button from "./components/Button/Button";
 import Input from "./components/Input/Input";
+import TodoFooter from "./components/TodoFooter";
 import TodoList from "./components/TodoList/TodoList";
 
 function App() {
@@ -66,6 +67,7 @@ function App() {
       </div>
 
       <TodoList tasks={tasks} setTasks={setTasks} />
+      <TodoFooter tasks={tasks} />
     </div>
   );
 }
