@@ -60,11 +60,6 @@
   background-color: rgb(167 139 250);
 }
 
-.input_textfield { 
-  width: 100%;
-  height: 30px;
-}
-
 .priority {
   display: flex;
 }

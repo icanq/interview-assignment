@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import Input from "./components/Input/Input";
 import TodoList from "./components/TodoList/TodoList";
 
 function App() {
@@ -28,13 +29,7 @@ function App() {
     <div className="App">
       <h1>Pekerjaan Rumah Yang Perlu Dilakukan</h1>
       <div className="input-task">
-        <input
-          value={task}
-          defaultValue=""
-          onChange={(e) => setTask(e.target.value)}
-          className="input_textfield"
-          placeholder="Masukan nama tugas yang perlu dilakukan ..."
-        />
+        <Input task={task} setTask={setTask} />
         <div className="priority">
           <p>Prioritas: </p>
           <div className="priority_radio">
