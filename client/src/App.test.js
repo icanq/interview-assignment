@@ -4,8 +4,8 @@ import App from "./App";
 // Tes 0: render header
 test("should render header", () => {
   render(<App />);
-  const linkElement = screen.getByText(/Pekerjaan Rumah Yang Perlu Dilakukan/i);
-  expect(linkElement).toBeInTheDocument();
+  const textElement = screen.getByText("Pekerjaan Rumah Yang Perlu Dilakukan");
+  expect(textElement).toBeInTheDocument();
 });
 
 describe("Creating a new task", () => {
@@ -48,10 +48,14 @@ describe("Creating a new task", () => {
       /Masukan nama tugas yang perlu dilakukan .../i
     );
 
-    // Setelah berhasil dapet input, ketik sesuatu ke input tersebut
+    // Setelah berhasil dapet inputelement, ketik sesuatu ke input tersebut
     fireEvent.change(inputElement, { target: { value: "Bersihin Kamar" } });
+
+    // mendapatkan tombol dengan tulisan tambah
     const buttonTambah = screen.getByRole("button", { name: /Tambah/i });
+    // mengklik tombol tambah
     fireEvent.click(buttonTambah);
+    // value dari input harus "" setelah diklik tombol tambah
     expect(inputElement.value).toBe("");
   });
 });
