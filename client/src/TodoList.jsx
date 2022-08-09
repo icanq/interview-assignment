@@ -1,14 +1,18 @@
-import React from "react";
-
-export default function TodoList() {
+export default function TodoList({ tasks, handleDelete, handleComplete }) {
   return (
-    <div>
-      <li>
-        masak ikan <button>Hapus</button>
-      </li>
-      <li>
-        minum air <button>Hapus</button>
-      </li>
+    <div className="list-box">
+      {tasks.map((task) => (
+        <li className={task.complete ? "completed-list" : "list"} key={task.id}>
+          <div className="taskname">{task.name}</div>
+          <div>
+            <button onClick={() => handleDelete(task.id)}>Hapus</button>
+            <input
+              type="checkbox"
+              onClick={() => handleComplete(task.id)}
+            ></input>
+          </div>
+        </li>
+      ))}
     </div>
   );
 }
