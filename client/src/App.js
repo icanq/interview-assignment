@@ -21,12 +21,14 @@ function App() {
           ],
           tasks: [
             {
+              id: 346,
               text: "Cuci Baju",
-              completed: false,
+              completed: "",
             },
             {
+              id: 898,
               text: "Masak Nasi",
-              completed: false,
+              completed: "",
             }
           ]
         },
@@ -36,16 +38,19 @@ function App() {
           desc: "Lari ringan keliling kompleks pulang beli bakso",
           labels: [
             {
+              id: 2345,
               text: "Olahraga",
               color: "#4fcc25",
             }
           ],
           tasks: [
             {
+              id: 3425,
               text: "Prepare Barang",
               completed: false,
             },
             {
+              id: 2346,
               text: "Beli Bakso",
               completed: false,
             }
@@ -63,16 +68,19 @@ function App() {
           desc: "Mengerjakan tugas mata kuliah computer vision individu",
           labels: [
             {
+              id:2371,
               text:"Kuliah",
               color:"#1ebffa",
             }
           ],
           tasks: [
             {
+              id:2872,
               text: "Mencari Jurnal",
               completed: true,
             },
             {
+              id:1298,
               text: "Review Algoritma",
               completed: false,
             }
@@ -90,16 +98,19 @@ function App() {
           desc: "Memasak beberapa olahan ikan yang lezat",
           labels: [
             {
+              id: 1237,
               text: "Memasak",
               color:"cf61a1",
             }
           ],
           tasks: [
             {
+              id: 1242,
               text: "Pergi ke pasar jam 6am",
               completed: true,
             },
             {
+              id: 23412,
               text: "Prepare peralatan",
               completed: true,
             }
@@ -110,8 +121,7 @@ function App() {
     {
       id: 4567892997,
       title: "Tambahan",
-      cards: [
-      ]
+      cards: []
     }
   ]);
 

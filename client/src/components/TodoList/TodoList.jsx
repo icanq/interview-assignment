@@ -45,7 +45,7 @@ export default function TodoList(props) {
           />
         ))}
         <Editable
-          text="+ Tambah Data"
+          text="+ Tambah Task"
           placeholder="Masukkan Judul Pekerjaan"
           displayClass="board_add-card"
           editClass="board_add-card_edit"
