@@ -119,12 +119,12 @@ function CardInfo(props) {
         <div className="cardinfo_box">
           <div className="cardinfo_box_title">
             <Type />
-            <p>Title</p>
+            <p>Judul</p>
           </div>
           <Editable
             defaultValue={values.title}
             text={values.title}
-            placeholder="Enter Title"
+            placeholder="Masukkan judul"
             onSubmit={updateTitle}
           />
         </div>
@@ -132,12 +132,12 @@ function CardInfo(props) {
         <div className="cardinfo_box">
           <div className="cardinfo_box_title">
             <List />
-            <p>Description</p>
+            <p>Deskripsi</p>
           </div>
           <Editable
             defaultValue={values.desc}
-            text={values.desc || "Add a Description"}
-            placeholder="Enter description"
+            text={values.desc || "Tambah Deskripsi"}
+            placeholder="Masukkan deskripsi"
             onSubmit={updateDesc}
           />
         </div>
@@ -145,7 +145,7 @@ function CardInfo(props) {
         <div className="cardinfo_box">
           <div className="cardinfo_box_title">
             <Calendar />
-            <p>Date</p>
+            <p>Deadline</p>
           </div>
           <input
             type="date"
@@ -158,7 +158,7 @@ function CardInfo(props) {
         <div className="cardinfo_box">
           <div className="cardinfo_box_title">
             <Tag />
-            <p>Labels</p>
+            <p>Label</p>
           </div>
           <div className="cardinfo_box_labels">
             {values.labels?.map((item, index) => (
@@ -182,8 +182,8 @@ function CardInfo(props) {
             ))}
           </ul>
           <Editable
-            text="Add Label"
-            placeholder="Enter label text"
+            text="Tambah Label"
+            placeholder="Masukkan detail label"
             onSubmit={(value) =>
               addLabel({ color: selectedColor, text: value })
             }
