@@ -26,6 +26,7 @@ function App() {
             },
             {
               text: "Masak Nasi",
+              completed: false,
             }
           ]
         },
@@ -46,6 +47,7 @@ function App() {
             },
             {
               text: "Beli Bakso",
+              completed: false,
             }
           ]
         }
@@ -56,6 +58,7 @@ function App() {
       title: "Dalam Proses",
       cards: [
         {
+          id: 34272679,
           title: "Tugas Kuliah",
           desc: "Mengerjakan tugas mata kuliah computer vision individu",
           labels: [
@@ -82,15 +85,20 @@ function App() {
       title: "Selesai",
       cards: [
         {
-          title: "Berenang",
-          desc: "Mencoba rutinitas olahraga baru dengan nanda, farra dan erlin",
+          id: "1202808",
+          title: "Memasak Ikan",
+          desc: "Memasak beberapa olahan ikan yang lezat",
           labels: [
             {
-              text: "Olahraga",
-              color:"#4fcc25",
+              text: "Memasak",
+              color:"cf61a1",
             }
           ],
           tasks: [
+            {
+              text: "Pergi ke pasar jam 6am",
+              completed: true,
+            },
             {
               text: "Prepare peralatan",
               completed: true,
@@ -101,7 +109,7 @@ function App() {
     },
     {
       id: 4567892997,
-      title: "Catatan",
+      title: "Tambahan",
       cards: [
       ]
     }
